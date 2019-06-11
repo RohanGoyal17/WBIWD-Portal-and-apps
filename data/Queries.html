@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="theme-color" content="#2c2d44">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Complaint Portal</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="60633484122-ibfjbansfcr1666dek8ai2rpugcteo7f.apps.googleusercontent.com">
+        <!-- bootstrap & fontawesome css -->
+        <link href="http://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
+        
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
+        
+        <script src="jquery.min.js"></script>
+  		<script src="jquery.serialize-object.min.js"></script>
+     
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+        <link rel="stylesheet" href="main.css">
+        
+        <style type="text/css">
+            .glyphicon-refresh-animate {
+                -animation: spin .7s infinite linear;
+                -webkit-animation: spin2 .7s infinite linear;
+            }
+            @-webkit-keyframes spin2 {
+                from { -webkit-transform: rotate(0deg);}
+                to { -webkit-transform: rotate(360deg);}
+            }
+            @keyframes spin {
+                from { transform: scale(1) rotate(0deg);}
+                to { transform: scale(1) rotate(360deg);}
+            }
+        </style>
+        
+        <style>
+
+		/* width */
+		::-webkit-scrollbar {
+		  width: 10px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+		  background: transparent; 
+		}
+		 
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+		  background: #cccccc;
+		  border-radius: 5px;
+		}
+
+		.focus-input100{
+			color: #8dade0;
+			
+		}
+		</style>
+        
+        
+        <link rel="icon" href="fav.png" type="image/gif" >
+    </head>
+	    <script>
+		function toggleField(hideObj,showObj){
+		  hideObj.disabled=true;        
+		  hideObj.style.display='none';
+		  showObj.disabled=false;   
+		  showObj.style.display='inline';
+		  showObj.focus();
+		}
+		</script>
+	<body style="background-color: #2c2d44;">
+			<div class="container-contact100">
+        <div class="wrap-contact100" >
+            <div id="topback" class="contact100-form-title" style="background-image: url(123.jpg);">
+                <span class="contact100-form-title-1">
+                    File Your Concerns
+                </span>
+            </div>
+            
+            <div >
+                
+           
+                <form class="contact100-form validate-form"  id="test-form" role="form">
+                    
+                    
+                    
+                    
+                     <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Name:</span>
+                        <div>
+                            <div>
+                                <input type="text" class="input100" class="form-control" name="Name" id="DriverName" placeholder="" >
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Email:</span>
+                        <div>
+                            <div>
+                                <input type="text" class="input100" class="form-control" name="Email" id="DriverNam" placeholder="" >
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Mobile No:</span>
+                        <div >
+                            <div>
+                                <input type="text" class="input100"   class="form-control" name="MobileNo" id="StudentMoblieNo" placeholder="" >
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                     <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Subject:</span>
+                        <div>
+                            <div>
+                                
+                                <select class="dropdownac"  class="input100" class="form-control" name="Subject" id="Destination" placeholder=""   onchange="if(this.options[this.selectedIndex].value=='customOption'){toggleField(this,this.nextSibling); this.selectedIndex='1';}">
+                                  <option></option>  
+                                  <option value="customOption">[other]</option>
+                                  <option value="irrigation">Irrigation</option>
+                                  <option value="WasteWater">Waste Water</option>
+                                  
+                                  <option value="Residential">Residential</option>
+                                </select><input type="text" class="input100" class="form-control" name="Subject" id="Destination" placeholder=""  style="display:none;" disabled="disabled" onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
+
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                    
+                  
+                    
+                    <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">State the Issue:</span>
+                        <div>
+                            <div>
+                                <input type="text" class="input100" class="form-control" name="Issue" id="DrverName" placeholder="" >
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" >
+                        <span class="label-input100">Feedback:</span>
+                        <div>
+                            <div>
+                                <input type="text" class="input100" class="form-control" name="Feedback" id="DriverNme" placeholder="" >
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div>
+                        <div class="container-contact100-form-btn">
+
+
+
+                            <button type="submit"   id="postForm" class="contact100-form-btn" style="background: #2c2d44;" onmouseover="this.style.background= '#8dade0'" onmouseout="this.style.background= '#2c2d44'">
+                                Submit
+                            </button>
+                            
+                        </div>
+                    </div>
+                    
+                </form>
+               
+                
+                
+            </div>
+        </div>
+        
+        
+       
+<script src="validation-functions.js"></script>
+</body>
+</html>
