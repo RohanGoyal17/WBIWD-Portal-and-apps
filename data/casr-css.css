@@ -1,0 +1,87 @@
+.html, body {
+    height: 100%;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #eeffee;
+}
+
+.car1, .car2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    left:0;
+    top: 80px;
+    height: auto;
+    overflow: auto;
+    display: block;
+}
+
+.car1 {
+    margin-top: 80px;
+}
+
+#dark {
+    background-color: #2c2d44;
+}
+
+#light {
+    background-color: #333333;
+}
+
+.image {
+    border-radius: 20px;
+    margin-right: 8vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    right: 0vw;
+    height: auto;
+    left: auto;
+    max-height: 570px;
+    max-width: 570px;
+
+    float: right;
+}
+
+.NameandYear {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #f3eff5;
+    margin-left: 6vw;
+    font-weight: 1000;
+    clear:left;
+    font-size: 3em;
+}
+
+.description {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1em;
+    margin-left: 6vw;
+    font-weight: 100;
+    line-height: 3.25vh;
+    color: #f3eff5;
+}
+
+
+@media only screen and (max-width: 1080px) {
+    .image {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: block;
+    }
+    .cars1, .cars2 {
+        text-align: center;
+    }
+    .description, .NameandYear {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .image {
+        width: 80%;
+    }
+}
